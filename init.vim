@@ -5,10 +5,12 @@ set clipboard+=unnamedplus
 set incsearch
 set wildmenu
 set relativenumber
+
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-"set expandtab
+set expandtab
+set smarttab
 
 let mapleader = " " " Map leader to space
 
