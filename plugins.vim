@@ -11,51 +11,65 @@ call plug#begin()
 
 	" File explorer
 	Plug 'mcchrish/nnn.vim'
+  let g:nnn#layout = { 'window': { 'width': 0.5, 'height': 0.7, 'highlight': 'Comment', 'xoffset': 1 } }
+
+	Plug 'nvim-lua/plenary.nvim'
 
 	" Telescope for file finding, searching etc
-	Plug 'nvim-lua/plenary.nvim'
 	Plug 'nvim-telescope/telescope.nvim'
+  Plug 'nvim-telescope/telescope-file-browser.nvim'
 
 	" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-	Plug 'junegunn/vim-easy-align'
+	" Plug 'junegunn/vim-easy-align'
 
 	" Vim surround
 	Plug 'tpope/vim-surround'
 
 	" Common LSP config for NVIM
-	Plug 'neovim/nvim-lspconfig'
-	Plug 'VonHeikemen/lsp-zero.nvim',
+	" Plug 'neovim/nvim-lspconfig'
 
 	" LSP niceties
-	Plug 'williamboman/nvim-lsp-installer'
-	Plug 'jose-elias-alvarez/null-ls.nvim'
+	" Plug 'williamboman/nvim-lsp-installer'
+	" Plug 'jose-elias-alvarez/null-ls.nvim'
 
 	" Autocompletion
-	Plug 'hrsh7th/nvim-cmp'
-	Plug 'hrsh7th/cmp-buffer'
-	Plug 'hrsh7th/cmp-path'
-	Plug 'saadparwaiz1/cmp_luasnip'
-	Plug 'hrsh7th/cmp-nvim-lsp'
-	Plug 'hrsh7th/cmp-nvim-lua'
+	" Plug 'hrsh7th/nvim-cmp'
+	" Plug 'hrsh7th/cmp-buffer'
+	" Plug 'hrsh7th/cmp-path'
+	" Plug 'saadparwaiz1/cmp_luasnip'
+	" Plug 'hrsh7th/cmp-nvim-lsp'
+	" Plug 'hrsh7th/cmp-nvim-lua'
 
-	" Eslint
-	Plug 'MunifTanjim/eslint.nvim'
+  " Do some setup for me please
+	" Plug 'VonHeikemen/lsp-zero.nvim',
+
+  " COC, language completion
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+  " Eslint and friends...
+  " Plug 'neovim/nvim-lspconfig'
+  " Plug 'jose-elias-alvarez/null-ls.nvim'
+	" Plug 'MunifTanjim/eslint.nvim'
 
 	" Prettier
-	Plug 'prettier/vim-prettier', {
-		\ 'do': 'yarn install --frozen-lockfile --production',
-		\ 'branch': 'release/0.x'
-		\ }
+  " Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
 	" Snippets
 	Plug 'L3MON4D3/LuaSnip'
 	Plug 'rafamadriz/friendly-snippets'
 
-	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
 	Plug 'jiangmiao/auto-pairs'
 
+  Plug 'terrortylor/nvim-comment'
 
+  " FZF!
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
 
-	" Initialize plugin system
+  Plug 'tpope/vim-fugitive'
+
+  " Tree stuff
+  Plug 'kyazdani42/nvim-tree.lua'
+
+  " Initialize plugin system
 call plug#end()
