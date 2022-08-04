@@ -1,5 +1,5 @@
 " Escape
-inoremap jk <ESC>
+" inoremap jk <ESC>
 tnoremap ,. <C-\><C-n>
 
 let g:nnn#action = {
@@ -16,6 +16,13 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').live_grep({ cwd=vim.fn.expand('%:h:p') })<cr>
 nnoremap <leader>fd <cmd>Telescope file_browser<cr>
 nnoremap <leader>fs <cmd>NvimTreeToggle %:p:h<cr>
+
+nnoremap <leader>ts <cmd>Telescope coc document_symbols<cr>
+nnoremap <leader>tu <cmd>Telescope coc references_used<cr>
+
+nnoremap <leader>n <cmd>call CocAction('diagnosticNext')<cr>
+
+nnoremap <leader>r <Plug>(coc-rename)
 
 " Comment
 nnoremap <leader>c <cmd>CommentToggle<cr>

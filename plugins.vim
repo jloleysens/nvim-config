@@ -18,6 +18,7 @@ call plug#begin()
 	" Telescope for file finding, searching etc
 	Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-file-browser.nvim'
+  Plug 'fannheyward/telescope-coc.nvim'
 
 	" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 	" Plug 'junegunn/vim-easy-align'
@@ -72,4 +73,5 @@ call plug#begin()
   Plug 'kyazdani42/nvim-tree.lua'
 
   " Initialize plugin system
+  " Plug 'feline-nvim/feline.nvim'
 call plug#end()

@@ -1,3 +1,5 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "javascriptreact", "typescriptreact", "css", "scss"]
+  "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "javascriptreact", "typescriptreact", "css", "scss"],
+  "typescript.preferences.useAliasesForRenames": false,
+  "javascript.preferences.useAliasesForRenames": false
 }
